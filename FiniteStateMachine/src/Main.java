@@ -23,7 +23,9 @@ public class Main {
         put("A", s3);
         put("B", s0);
     }});
-    StateMachine State = new StateMachine(Stream.of(s0, s1, s2, s3).collect(Collectors.toCollection(HashSet::new)), s0);
-    State.StartText();
+    StateMachine State = new StateMachine();
+    State.setNodes(Stream.of(s0, s1, s2, s3).collect(Collectors.toCollection(HashSet::new)));
+    State.setCurrentNode(s0);
+    State.StartRandom(4);
     }
 }
