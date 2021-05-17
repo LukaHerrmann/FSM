@@ -22,6 +22,8 @@ class StateMachineTest {
 
     @Test
     void getCurrentNode() {
+        State.setCurrentNode(node2);
+        assertEquals(node2, State.getCurrentNode());
     }
 
     @Test
