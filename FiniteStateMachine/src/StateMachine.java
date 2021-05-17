@@ -6,9 +6,20 @@ public class StateMachine {
     private HashSet<Node> Nodes;
     private Node CurrentNode;
 
-    public StateMachine(HashSet Nodes, Node StartNode) {
-        this.Nodes = Nodes;
-        this.CurrentNode = StartNode;
+    public HashSet<Node> getNodes() {
+        return Nodes;
+    }
+
+    public void setNodes(HashSet<Node> nodes) {
+        Nodes = nodes;
+    }
+
+    public Node getCurrentNode() {
+        return CurrentNode;
+    }
+
+    public void setCurrentNode(Node currentNode) {
+        CurrentNode = currentNode;
     }
 
     public void StartText(){
