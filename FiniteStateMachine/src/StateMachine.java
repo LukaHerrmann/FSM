@@ -1,5 +1,6 @@
 
 import java.util.*;
+import java.util.Random;
 
 public class StateMachine {
     private HashSet<Node> Nodes;
@@ -28,5 +29,15 @@ public class StateMachine {
         }
     }
 
-    public void StartRandom(){}
+    public void StartRandom(int iterations){
+        for (int i = 0; i < iterations; i++) {
+            System.out.println("Huidige node: " + CurrentNode.getNaam());
+            Random random = new Random();
+            Object[] values = CurrentNode.getOvergangen().keySet().toArray();
+            Object randomvalue = values[random.nextInt(values.length)];
+            Node newnode = CurrentNode.getOvergangen().get(randomvalue);
+            System.out.println("Gekozen voor " + randomvalue + ", wat leidt naar node " + newnode.getNaam());
+            CurrentNode = newnode;
+        }
+    }
 }
