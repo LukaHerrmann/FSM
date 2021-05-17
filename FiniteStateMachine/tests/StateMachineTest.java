@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -24,13 +25,5 @@ class StateMachineTest {
     void getCurrentNode() {
         State.setCurrentNode(node2);
         assertEquals(node2, State.getCurrentNode());
-    }
-
-    @Test
-    void startText() {
-    }
-
-    @Test
-    void startRandom() {
     }
 }
