@@ -5,10 +5,10 @@ import java.util.HashMap;
 import static org.junit.jupiter.api.Assertions.*;
 
 class NodeTest {
-    private Node node = new Node("node");
-    private Node node1 = new Node("anothernode");
-    private Node node2 = new Node("newnode");
-    private Node node3 = new Node("subnode");
+    Node node = new Node("node");
+    Node node1 = new Node("anothernode");
+    Node node2 = new Node("newnode");
+    Node node3 = new Node("subnode");
 
     @Test
     void getNaam() throws Exception {
